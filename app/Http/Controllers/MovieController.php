@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Practice;
 use App\Models\Movie;
 
-class PracticeController extends Controller
+class MovieController extends Controller
 {
     public function sample()
     {
@@ -21,11 +20,6 @@ class PracticeController extends Controller
     {
         $test = 'test';
         return view('practice3', ['testParam' => $test]);
-    }
-    public function getPractice()
-    {
-        $practices = Practice::all();
-        return view('getPractice', ['practices' => $practices]);
     }
     public function getMovie()
     {

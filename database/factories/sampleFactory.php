@@ -4,18 +4,20 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class MovieFactory extends Factory
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ */
+class sampleFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function definition()
     {
         return [
-            'title' => $this->faker->unique()->word,
-            'image_url' => $this->faker->imageUrl(),
+            //
         ];
     }
 }
