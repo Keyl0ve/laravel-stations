@@ -8,6 +8,5 @@
 </head>
 <body>
     <strong>{{ $testParam }}</strong>
-    <strong>{{ $aaa }}</strong>
 </body>
 </html>
