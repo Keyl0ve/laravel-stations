@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('movies');
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->text('title')->comment('タイトル');
-            $table->text('image_url')->comment('イメージ');
-            $table->timestamp('updated_at')->useCurrent()->nullable();
-            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->text('title')->comment('映画タイトル');
+            $table->text('image_url')->comment('画像URL');
+            $table->integer('published_year')->comment('公開年');
+            $table->boolean('is_showing')->comment('上映中かどうか');
+            $table->text('description')->comment('概要');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 
